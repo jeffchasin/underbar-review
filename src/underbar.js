@@ -54,9 +54,9 @@
   // iterator function over each item in the input collection.
   _.each = function(collection, iterator) {
     if (Array.isArray(collection)) {
-      collection.forEach(function(value, key, collection) {
-        iterator(value, key, collection);
-      });
+      for (var i = 0; i < collection.length; i++) {
+        iterator(collection[i], i, collection);
+      }
     } else if (collection !== null && typeof collection === 'object') {
       for (var prop in collection) {
         iterator(collection[prop], prop, collection);
