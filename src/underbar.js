@@ -135,8 +135,8 @@
     // like each(), but in addition to running the operation on all
     // the members, it also maintains an array of results.
     var result = [];
-    _.each(collection, function(value, index) {
-      result.push(iterator(value));
+    _.each(collection, function(item, key) {
+      result.push(iterator(item));
     });
     return result;
   };
