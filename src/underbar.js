@@ -255,6 +255,14 @@
   // Like extend, but doesn't ever overwrite a key that already
   // exists in obj
   _.defaults = function(obj) {
+    _.each(arguments, function(argObj) {
+      _.each(argObj, function(value, key) {
+        if (key in obj === false) {
+          obj[key] = value;  
+        }
+      });
+    });
+    return obj;
   };
 
 
