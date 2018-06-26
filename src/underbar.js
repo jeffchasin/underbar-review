@@ -315,7 +315,7 @@
         results[prop] = func.apply(this, arguments);
         return results[prop];
       }
-    }
+    };
   };
 
   // Delays a function for the given number of milliseconds, and then calls
